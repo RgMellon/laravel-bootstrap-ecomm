@@ -1,5 +1,7 @@
-<form method="PUT"  enctype="multipart/form-data" class="col-md-11 col-11" action="{{ route('produto.store') }}">
+<form method="POST"  enctype="multipart/form-data" class="col-md-11 col-11" action="{{ route('produto.update') }}">
     @csrf
+    <input name="_method" type="hidden" value="PUT">
+    <input type="hidden" name="id" value=" {{ $p->id }}">
     <div class="form-group">
       <label for="nome"> Nome </label>
       <input type="text" name="nome" class="form-control" id="nome" 
@@ -18,7 +20,7 @@
         {{ $p->descricao }}
       </textarea>
     </div>
-    
+
     <div class="form-group">
       <label for="exampleFormControlFile1">Selecione uma imagem</label>
       <input type="file" name="img" class="form-control-file" id="exampleFormControlFile1">

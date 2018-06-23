@@ -37,9 +37,23 @@ class ProdutosController extends Controller
         return redirect()->back();
     }
 
-    public function update(Request $request)
+    public function update(Request $request, Produto $produto)
     {
         $p = Produto::find($request->id);
-        var_dump($p);
+        $img = $request->file('img');
+
+        if($img !== null){
+            $name = $produto->moveImg($produto, $img);
+            $p->update([
+                'nome' => $request->input('nome'),
+                'preco' => $request->input('preco'),
+                'descricao' => $request->input('descricao'),
+                'img' => $name,
+            ]);
+        } else {
+            $p->update($request->all());
+        }
+
+        return redirect()->back();
     }
 }
