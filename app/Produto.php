@@ -8,7 +8,7 @@ class Produto extends Model
 {
     protected $fillable = ['nome', 'img', 'preco', 'descricao'];
 
-    public function moveImg(Produto $p, $image)
+    public function moveImg($image)
     {
         $name = time().'.'.$image->getClientOriginalExtension();
         $destinationPath = public_path('/img');

@@ -16,10 +16,8 @@ class ProdutosController extends Controller
             'descricao' => 'required'
         ]);
 
-        $image = $request->file('img');
-        $name = time().'.'.$image->getClientOriginalExtension();
-        $destinationPath = public_path('/img');
-        $image->move($destinationPath, $name);
+        $produto = new Produto();
+        $name = $produto->moveImg($request->file('img'));
 
         Produto::create([
             'nome' => $request->input('nome'),
@@ -31,7 +29,8 @@ class ProdutosController extends Controller
         return redirect()->route('dashboard');
     }
 
-    public function delete(Request $request){
+    public function delete(Request $request)
+    {
         $p = Produto::find($request->id);
         $p->delete();
         return redirect()->back();
@@ -43,11 +42,8 @@ class ProdutosController extends Controller
         $img = $request->file('img');
 
         if($img !== null){
-            $name = $produto->moveImg($produto, $img);
+            $name = $produto->moveImg($img);
             $p->update([
-                'nome' => $request->input('nome'),
-                'preco' => $request->input('preco'),
-                'descricao' => $request->input('descricao'),
                 'img' => $name,
             ]);
         } else {
