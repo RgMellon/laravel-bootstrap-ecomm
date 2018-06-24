@@ -7,6 +7,7 @@
       </div>
       <div class="col-sm col-md-12">
         @include('ecommerce.carousel')
+        @include('ecommerce.destaque_card')
         @include('ecommerce.card')
       </div>
   </div>
