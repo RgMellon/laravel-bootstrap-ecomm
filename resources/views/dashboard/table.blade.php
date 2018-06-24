@@ -14,7 +14,7 @@
       @foreach($produtos as $p)
         <tr>
           <th scope="row"> {{ $p->id }} </th>
-          <td> <img style="width:50px;" src="{{ asset("img/{$p->img}")}}"> </td>
+          <td> <img class="rounded" style="width:50px;" src="{{ asset("img/{$p->img}")}}"> </td>
           <td> {{ $p->nome}} </td>
           <td> {{ $p->preco}} </td>
           <td> {{ $p->descricao }} </td>

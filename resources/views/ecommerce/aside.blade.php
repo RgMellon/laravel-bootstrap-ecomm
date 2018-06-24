@@ -1,6 +1,11 @@
-<nav class="nav flex-column">
-  <h1 style="font-size:1.5rem;"> Categorias </h1>
-  <a class="nav-link" href="#"> Rick And Morty </a>
-  <a class="nav-link" href="#"> Star Wars </a>
-  <a class="nav-link" href="#"> Marvel </a>
-</nav>
+<!-- <div class="row">
+  <div class="col-md-12">
+    <ul class="list-group list-group">
+      <li class="list-group-item">Cras justo odio</li>
+      <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Morbi leo risus</li>
+      <li class="list-group-item">Porta ac consectetur ac</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+  </div>
+</div> -->
