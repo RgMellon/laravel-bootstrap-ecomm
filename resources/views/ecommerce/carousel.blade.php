@@ -3,17 +3,17 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="d-flex justify-content-center">
-        <img class="d-block w-80" src="{{ asset('img/banner/banner1.jpg')}}" alt="First slide">
+        <img class="d-block w-80" src="{{ asset('img/banner/banner1.jpg')}}" alt="primeiro slide">
       </div>
     </div>
     <div class="carousel-item">
       <div class="d-flex justify-content-center">
-        <img class="d-block w-80" src="{{ asset('img/banner/banner3.jpg')}}" alt="First slide">
+        <img class="d-block w-80" src="{{ asset('img/banner/banner3.jpg')}}" alt="segundo slide">
       </div>
     </div>
     <div class="carousel-item">
       <div class="d-flex justify-content-center">
-        <img class="d-block w-80" src="{{ asset('img/banner/banner2.jpg')}}" alt="First slide">
+        <img class="d-block w-80" src="{{ asset('img/banner/banner.jpg')}}" alt="terceiro slide">
       </div>
     </div>
   </div>
