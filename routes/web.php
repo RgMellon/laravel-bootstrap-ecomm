@@ -11,6 +11,10 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){
   Route::put('update', 'ProdutosController@update')->name('produto.update');
 });
 
+Route::group(['prefix' => 'carrinho', 'middleware' => 'auth'], function() {
+  Route::get('/', 'CarrinhoController@index')->name('carrinho.index');
+});
+
 Route::get('dashboard', 'DashBoardController@view')->
 name('dashboard')->middleware('auth');
 
