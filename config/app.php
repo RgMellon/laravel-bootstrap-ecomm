@@ -31,7 +31,7 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode
-    |--------------------------------------------------------------------------
+    |----------------------------base64:/XjIQ724AUIMZPF1ySSyh9MZ8OAwsHElj7GLkMOexHA=----------------------------------------------
     |
     | When your application is in debug mode, detailed error messages with
     | stack traces will be shown on every error that occurs within your
@@ -104,7 +104,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY'),
+    'key' => env('base64:/XjIQ724AUIMZPF1ySSyh9MZ8OAwsHElj7GLkMOexHA='),
 
     'cipher' => 'AES-256-CBC',
 
