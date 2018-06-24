@@ -10518,3 +10518,10 @@ a:focus {
   color: #72afd2;
 }
 
+.img-item-lista {
+  width: 60px;
+  height: 60px;
+  margin-left: -3rem;
+  margin-top: -7px;
+}
+
