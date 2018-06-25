@@ -35,4 +35,14 @@ class Carrinho extends Model
     {
         return $this->itens;
     }
+
+    public function getTotal()
+    {
+        $arrayPreco = array();
+        foreach($this->itens as $i){
+           $arrayPreco[] = $i['item']['preco'] * $i['qtd'];
+        }
+        $total = collect($arrayPreco)->sum();
+        return $total;
+    }
 }

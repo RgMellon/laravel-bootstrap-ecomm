@@ -10525,3 +10525,22 @@ a:focus {
   margin-top: -7px;
 }
 
+.acoes i {
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+}
+
+.acoes {
+  margin-right: -3rem;
+}
+
+#plus {
+  margin-top: -1.3rem;
+}
+
+#delete {
+  margin-bottom: -2.8rem;
+  color: #cc7575;
+}
+

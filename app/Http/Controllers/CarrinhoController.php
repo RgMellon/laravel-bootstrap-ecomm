@@ -13,7 +13,7 @@ class CarrinhoController extends Controller
     {
         $carrinho = new Carrinho();
         return view('ecommerce.carrinho.index')
-                    ->with(['itens' => $carrinho->getItens()]);
+                    ->with(['itens' => $carrinho->getItens(), 'total' => $carrinho->getTotal()]);
     }
 
     public function addCart($id)

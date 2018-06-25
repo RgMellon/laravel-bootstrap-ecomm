@@ -5,9 +5,8 @@
               Finalizar Compra
         </button>
       </div>
-
       <div class="resultado align-self-center">
-          <p style="font-size:1.6rem;"> R$ 900 </p>
+        <p style="font-size:1.6rem;">  R$ {{ number_format($total, 2) }}</p>
       </div>
 </div>
 </div>
