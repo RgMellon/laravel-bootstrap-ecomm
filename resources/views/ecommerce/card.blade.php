@@ -17,7 +17,7 @@
       <a href="#" class="card-link">
           Detalhes
       </a>
-      <a href="#" class="card-link">
+      <a href="{{ route('carrinho.adicionar', $p->id) }}" class="card-link">
         <i class="fas fa-cart-plus"></i>
         Adicionar ao carrinho
       </a>
