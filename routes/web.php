@@ -14,6 +14,7 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){
 Route::group(['prefix' => 'carrinho', 'middleware' => 'auth'], function() {
   Route::get('/', 'CarrinhoController@index')->name('carrinho.index');
   Route::get('adicionar/{id}', 'CarrinhoController@addCart')->name('carrinho.adicionar');
+  Route::get('remover/{id}', 'CarrinhoController@removeCart')->name('carrinho.remover');
 });
 
 Route::get('dashboard', 'DashBoardController@view')->

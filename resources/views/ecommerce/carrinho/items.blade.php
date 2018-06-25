@@ -25,11 +25,11 @@
       </div>
 
       <div class="acoes d-flex flex-column justify-content-between">
-        <a href="" id="plus">
+      <a href=" {{ route('carrinho.adicionar', $i['item']['id'] ) }} " id="plus">
             <i class="fas fa-plus-circle" ></i>
         </a>
 
-        <a href="" id="delete">
+        <a href="{{ route('carrinho.remover', $i['item']['id'] ) }}" id="delete">
           <i class="fas fa-minus-circle"></i>
         </a>
 

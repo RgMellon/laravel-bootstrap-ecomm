@@ -30,4 +30,15 @@ class CarrinhoController extends Controller
 
         return redirect()->route('carrinho.index');
     }
+
+    public function removeCart($id)
+    {
+        $c = new Carrinho();
+        $p = Produto::find($id);
+        if($p == null){
+            return redirect()->route('home');
+        }
+        $c->remove($p);
+        return redirect()->route('carrinho.index');
+    }
 }

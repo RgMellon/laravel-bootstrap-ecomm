@@ -45,4 +45,19 @@ class Carrinho extends Model
         $total = collect($arrayPreco)->sum();
         return $total;
     }
+
+    public function remove(Produto $p)
+    {
+        if(array_key_exists($p->id, $this->itens)) {
+            if($this->itens[$p->id]['qtd'] > 1) {
+                $this->itens[$p->id]['qtd'] -= 1;
+                Session::put('cart', $this);
+            }else {
+                unset($this->itens[$p->id]);
+                Session::put('cart', $this);
+            }
+
+        }
+    }
+
 }
