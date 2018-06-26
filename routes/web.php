@@ -1,14 +1,22 @@
 <?php
 
-use App\Http\Controllers\ProdutosController;
 Auth::routes();
 
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){
+Route::group(['prefix' => 'dashboard', 'middleware' => 'can:view,App\Dashboard,auth'], function(){
   Route::get('create', 'DashBoardController@create')->name('dashboard.create');
   Route::post('store', 'ProdutosController@store')->name('produto.store');
   Route::delete('delete', 'ProdutosController@delete')->name('produto.delete');
   Route::put('update', 'ProdutosController@update')->name('produto.update');
+  Route::get('card/create', 'CardController@create')->name('card.create');
 });
+
+// Route::get('dashboard/card/create', function() {
+
+// })->middleware('can:view,App\Dashboard')->name('card.create');
+
+// Route::put('/post/{post}', function (Post $post) {
+//   // The current user may update the post...
+// })->middleware('can:view,post');
 
 Route::group(['prefix' => 'carrinho', 'middleware' => 'auth'], function() {
   Route::get('/', 'CarrinhoController@index')->name('carrinho.index');

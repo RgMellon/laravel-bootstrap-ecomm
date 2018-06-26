@@ -17,6 +17,15 @@
             <a class="dropdown-item text-light" href="#">Detalhes</a>
           </div>
         </li>
+        <li class="nav-item dropdown navbar-dark bg-dark">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Card
+          </a>
+          <div class="dropdown-menu text-light bg-dark" style="border:0px;" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item text-light" href="{{ route('card.create')}}">Adicionar</a>
+            <a class="dropdown-item text-light" href="#">Detalhes</a>
+          </div>
+        </li>
       </ul>
   </div>
 </nav>
