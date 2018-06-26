@@ -1,7 +1,6 @@
 <?php
 
-
-
+use App\Http\Controllers\ProdutosController;
 Auth::routes();
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){
@@ -21,3 +20,4 @@ Route::get('dashboard', 'DashBoardController@view')->
 name('dashboard')->middleware('auth');
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('detalhe/{id}', 'ProdutosController@detail')->name('produto.detalhe');

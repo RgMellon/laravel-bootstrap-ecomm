@@ -26,5 +26,5 @@
       <input type="file" name="img" class="form-control-file" id="exampleFormControlFile1">
     </div>
 
-    <button type="submit" class="btn btn-outline-dark">Salvar</button>
+    <button style="position:absolute; bottom:-84px" type="submit" class="btn btn-outline-dark">Atualizar</button>
   </form>

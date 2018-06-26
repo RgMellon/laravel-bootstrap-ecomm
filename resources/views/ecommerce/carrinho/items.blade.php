@@ -12,11 +12,21 @@
           <div class="info-titulo align-self-center">
             <h1 style="font-size: 1.1rem;">  {{ $i['item']['nome']}} </h1>
             <p style="color:grey"> {{ $i['item']['descricao']}}</p>
+            
+            <div class="qtd-items d-flex justify-content-between" style="width:100px">
+                <a href=" {{ route('carrinho.adicionar', $i['item']['id'] ) }} ">
+                      <i class="fas fa-plus-circle" ></i>
+                </a>
+                <p> Qtd :  {{ $i['qtd'] }} </p>
+                <a href="{{ route('carrinho.remover', $i['item']['id'] ) }}" >
+                  <i class="fas fa-minus-circle" style="color:red"></i>
+                </a>
+            </div>
           </div>
 
           <div class="resumo d-flex flex-column justify-content-between">
             <div class="">
-              <p> Qtd :  {{ $i['qtd'] }} </p>
+              <p> </p>
             </div>
               <div class="preco">
               <p> R$ {{ number_format($i['item']['preco'], 2) }} </p>
@@ -24,16 +34,7 @@
           </div>
       </div>
 
-      <div class="acoes d-flex flex-column justify-content-between">
-      <a href=" {{ route('carrinho.adicionar', $i['item']['id'] ) }} " id="plus">
-            <i class="fas fa-plus-circle" ></i>
-        </a>
-
-        <a href="{{ route('carrinho.remover', $i['item']['id'] ) }}" id="delete">
-          <i class="fas fa-minus-circle"></i>
-        </a>
-
-      </div>
+      
     </div>
   </div>
 @endforeach

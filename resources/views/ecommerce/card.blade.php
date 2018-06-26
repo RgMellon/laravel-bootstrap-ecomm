@@ -6,7 +6,7 @@
     <div class="card-body">
       <div class="d-flex justify-content-between">
       <h5 class="card-title"> {{ $p->nome }}</h5>
-       <p style="color:blue">  R$ {{ number_format($p->preco, 2) }}  </p>
+       <p class="text-success">  R$ {{ number_format($p->preco, 2) }}  </p>
       </div>
       <hr>
 
@@ -14,7 +14,7 @@
          {{ $p->descricao }}
       </p>
       <hr>
-      <a href="#" class="card-link">
+      <a href="{{ route('produto.detalhe', $p->id) }}" class="card-link">
           Detalhes
       </a>
       <a href="{{ route('carrinho.adicionar', $p->id) }}" class="card-link">

@@ -42,6 +42,7 @@ class ProdutosController extends Controller
         $img = $request->file('img');
 
         if($img !== null){
+            \File::delete('img/'.$p->img);
             $name = $produto->moveImg($img);
             $p->update([
                 'img' => $name,
@@ -51,5 +52,11 @@ class ProdutosController extends Controller
         }
 
         return redirect()->back();
+    }
+
+    public function detail($id)
+    {
+        return view('ecommerce.detail')
+                ->with(['produto' => Produto::find($id)]);
     }
 }

@@ -10544,3 +10544,11 @@ a:focus {
   color: #cc7575;
 }
 
+.breadcrumb {
+  background-color: #fff;
+}
+
+.area-img {
+  width: 500px;
+}
+

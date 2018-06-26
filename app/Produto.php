@@ -9,10 +9,10 @@ class Produto extends Model
     protected $fillable = ['nome', 'img', 'preco', 'descricao'];
 
     public function moveImg($image)
-    {
+    {   
+        
         $name = time().'.'.$image->getClientOriginalExtension();
-        $destinationPath = public_path('/img');
-        $image->move($destinationPath, $name);
+        \Image::make($image)->resize(450, 450)->save(public_path('img/').$name, 100);
         return $name;
     }
 }
